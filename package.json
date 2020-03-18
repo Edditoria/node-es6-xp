@@ -1,0 +1,27 @@
+{
+  "name": "node-es6-xp",
+  "version": "1.0.0",
+  "description": "An experimental repo to find a sweet spot of ES-modules in Node.js",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edditoria <edditoria@gmail.com>",
+  "homepage": "https://github.com/Edditoria/node-es6-xp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edditoria/node-es6-xp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Edditoria/node-es6-xp/issues"
+  },
+  "keywords": [
+    "test",
+    "experimental",
+    "node"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
