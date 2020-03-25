@@ -7,7 +7,7 @@ In root directory of this repo, run:
 ```shell
 nvm use 12
 
-node index # I'm root index
+node index # I'm umd index
 node index.mjs # throw Error
 node mod # throw Error
 
