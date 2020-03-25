@@ -6,7 +6,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
   },
   "author": "Edditoria <edditoria@gmail.com>",
   "homepage": "https://github.com/Edditoria/node-es6-xp",
@@ -23,5 +24,8 @@
     "node"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }
