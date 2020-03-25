@@ -17,6 +17,7 @@ node index # I'm cjs index
 node index.mjs # I'm esm index
 node mod # I'm cjs module
 node mod.mjs # I'm esm module
+node import-error.mjs # throw Error (missing file extension)
 ```
 
 ![Screenshot of Terminal for experiencing Node 13 ESM conditional exports][screenshot]
