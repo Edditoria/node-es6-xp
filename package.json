@@ -24,7 +24,7 @@
     "node"
   ],
   "dependencies": {
-    "pkg": "file:pkg-1.0.0.tgz"
+    "pkg": "file:src/pkg"
   },
   "devDependencies": {
     "webpack": "^4.42.1",

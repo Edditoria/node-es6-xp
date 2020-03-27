@@ -1,6 +1,26 @@
 # node-es6-xp
 
-This is an experimental repo to find a sweet spot of ES-modules in Node 13 when we **develop a npm package**. Please note: It focuses on `<node_modules/pkg/>`, rather than explores how to consume a package.
+This is an experimental repo to find a sweet spot of ES-modules in Node 13 when we **develop a npm package**. Please note: It focuses on `<src/pkg/>`, rather than explores how to consume a package.
+
+In Node 13, we can make sure of ES Module natively, plus "conditional exports" to map to different paths. So, users can `import something from 'package-module.mjs'` from a package.
+
+## Prepare
+
+```shell
+npm install # pkg in local, webpack, rollup, etc.
+```
+
+"pkg", that emulate our package development, lives in `src/pkg` directory. If you modify any files in `<src/pkg/*>`, effect will be taken immediately. You can see in `<./package.json>`:
+
+```json
+{
+	"dependencies": {
+		"pkg": "file:src/pkg"
+	}
+}
+```
+
+For more information, please read "npm install \<folder\>" in [official docs about npm-install][npm_install_doc].
 
 ## Node.js
 
@@ -36,19 +56,13 @@ To understand the above results, please check out the `<node_modules/pkg/package
 ## Webpack
 
 ```shell
-npm install # ./package.json will take care of it
-
-ls node_modules/pkg
-# If the pkg directory is removed
-npm install pkg-1.0.0.tgz
-
 npm run webpack
 
 # For each of nvm use 12 and nvm use 13
 node dist/webpack/main.js # Object [Module] { default: "I'm esm index" }
 ```
 
-Check out `<dist/webpack/main.js>`. Webpack takes `<./node_modules/pkg/esm/index.mjs>`. It is because "module" field is set in `<./node_modules/pkg/package.js>`.
+Check out `<dist/webpack/main.js>`. Webpack takes `<node_modules/pkg/esm/index.mjs>`. It is because "module" field is set in `<src/pkg/package.js>`.
 
 ---
 
@@ -60,4 +74,5 @@ Notes:
 
 [screenshot]: docs/images/screenshot-terminal-node-13-esm.png
 
+[npm_install_doc]: https://docs.npmjs.com/cli/install
 [node_esm_doc]: https://nodejs.org/api/esm.html
