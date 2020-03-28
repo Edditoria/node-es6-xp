@@ -64,6 +64,17 @@ node dist/webpack/main.js # Object [Module] { default: "I'm esm index" }
 
 Check out `<dist/webpack/main.js>`. Webpack takes `<node_modules/pkg/esm/index.mjs>`. It is because "module" field is set in `<src/pkg/package.js>`.
 
+## Rollup
+
+```shell
+npm run rollup
+
+node dist/rollup/index.common.js # I'm esm index
+node dist/rollup/index.umd.js # I'm esm index
+```
+
+In `<./rollup.config.js>`, it is common to `import resolve from @rollup/plugin-node-resolve` to resolve modules in `<node_modules/>` directory. Users will install this plugin anyway.
+
 ---
 
 Notes:
