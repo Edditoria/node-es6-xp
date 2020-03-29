@@ -27,7 +27,7 @@ For more information, please read "npm install \<folder\>" in [official docs abo
 In root directory of this repo, run:
 
 ```shell
-nvm use 12
+nvm use 12 # or other node version management tools
 
 node index # I'm umd index
 node index.mjs # throw Error
@@ -39,10 +39,11 @@ node index # I'm cjs index
 node index.mjs # I'm esm index
 node mod # I'm cjs module
 node mod.mjs # I'm esm module
+node import-error # throw Error (internal/modules/cjs/loader.js:979)
 node import-error.mjs # throw Error (missing file extension in pkg/esm/import-error.mjs)
 ```
 
-To understand the above results, please check out the `<node_modules/pkg/package.json>` file:
+To understand the above results, please check out the `<src/pkg/package.json>` file:
 
 - "main": It acts as a fallback when you use Node <13. ESM and CommonJs are handled by bundling tools such as Webpack and Rollup.
 - "exports": It is the key to define how Node 13 works with "conditional exports".
@@ -62,7 +63,9 @@ npm run webpack
 node dist/webpack/main.js # Object [Module] { default: "I'm esm index" }
 ```
 
-Check out `<dist/webpack/main.js>`. Webpack takes `<node_modules/pkg/esm/index.mjs>`. It is because "module" field is set in `<src/pkg/package.js>`.
+Check out `<dist/webpack/main.js>`. Webpack takes `<src/pkg/esm/index.mjs>`. It is because "module" field is set in `<src/pkg/package.js>`.
+
+It is `src` rather than `node_modules` because local package actually "link" files using symlink.
 
 ## Rollup
 
@@ -75,11 +78,9 @@ node dist/rollup/index.umd.js # I'm esm index
 
 In `<./rollup.config.js>`, it is common to `import resolve from @rollup/plugin-node-resolve` to resolve modules in `<node_modules/>` directory. Users will install this plugin anyway.
 
----
+## Other Notes
 
-Notes:
-
-- What about other tools? Rollup, etc?
+- What about adding a "browser" field contains different properties (in the pkg)? e.g. client specific code. \#todo
 - Write in issues if you have question or suggestion.
 
 

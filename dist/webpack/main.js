@@ -93,31 +93,31 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const pkg = __webpack_require__(/*! pkg */ \"./node_modules/pkg/esm/index.mjs\");\n\nconsole.log(pkg);\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("const pkg = __webpack_require__(/*! pkg */ \"./src/pkg/esm/index.mjs\");\n\nconsole.log(pkg);\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./node_modules/pkg/esm/index.mjs":
-/*!****************************************!*\
-  !*** ./node_modules/pkg/esm/index.mjs ***!
-  \****************************************/
+/***/ "./src/pkg/esm/index.mjs":
+/*!*******************************!*\
+  !*** ./src/pkg/esm/index.mjs ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mod.mjs */ \"./node_modules/pkg/esm/mod.mjs\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_mod_mjs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].replace('module', 'index'));\n\n\n//# sourceURL=webpack:///./node_modules/pkg/esm/index.mjs?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mod.mjs */ \"./src/pkg/esm/mod.mjs\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_mod_mjs__WEBPACK_IMPORTED_MODULE_0__[\"default\"].replace('module', 'index'));\n\n\n//# sourceURL=webpack:///./src/pkg/esm/index.mjs?");
 
 /***/ }),
 
-/***/ "./node_modules/pkg/esm/mod.mjs":
-/*!**************************************!*\
-  !*** ./node_modules/pkg/esm/mod.mjs ***!
-  \**************************************/
+/***/ "./src/pkg/esm/mod.mjs":
+/*!*****************************!*\
+  !*** ./src/pkg/esm/mod.mjs ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ('I\\'m esm module');\n\n\n//# sourceURL=webpack:///./node_modules/pkg/esm/mod.mjs?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ('I\\'m esm module');\n\n\n//# sourceURL=webpack:///./src/pkg/esm/mod.mjs?");
 
 /***/ })
 
