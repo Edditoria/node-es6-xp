@@ -2,7 +2,7 @@
 
 This is an experimental repo to find a sweet spot of ES-modules in Node 13 when we **develop a npm package**. Please note: It focuses on `<src/pkg/>`, rather than explores how to consume a package.
 
-In Node 13, we can make sure of ES Module natively, plus "conditional exports" to map to different paths. So, users can `import something from 'package-module.mjs'` from a package.
+Starting from Node 13, we can make sure of ES Module natively, plus "conditional exports" to map to different paths. So, users can `import something from 'package-module.mjs'` from a package.
 
 ## Prepare
 
@@ -27,13 +27,13 @@ For more information, please read "npm install \<folder\>" in [official docs abo
 In root directory of this repo, run:
 
 ```shell
-nvm use 12 # or other node version management tools
+nvm use 10 # or other node version management tools
 
 node index # I'm umd index
 node index.mjs # throw Error
 node mod # throw Error
 
-nvm use 13
+nvm use 14
 
 node index # I'm cjs index
 node index.mjs # I'm esm index
@@ -59,7 +59,7 @@ To understand the above results, please check out the `<src/pkg/package.json>` f
 ```shell
 npm run webpack
 
-# For each of nvm use 12 and nvm use 13
+# For each of nvm use 10 and nvm use 14
 node dist/webpack/main.js # Object [Module] { default: "I'm esm index" }
 ```
 

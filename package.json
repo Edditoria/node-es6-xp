@@ -28,12 +28,12 @@
     "pkg": "file:src/pkg"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-node-resolve": "^7.1.3",
     "rollup": "^1.32.1",
     "rollup-plugin-babel": "^4.4.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
